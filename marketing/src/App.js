@@ -1,19 +1,18 @@
 import React from "react";
 
-import { Routes, Route } from "react-router-dom";
-import { BrowserRouter } from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
 import Landing from "./components/Landing";
 import Pricing from "./components/Pricing";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route exact path="/" element={<Landing />} />
-        <Route exact path="/pricing" element={<Pricing />} />
-      </Routes>
-    </BrowserRouter>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route path="/pricing" component={Pricing} />
+      </Switch>
+    </Router>
   );
 }
 

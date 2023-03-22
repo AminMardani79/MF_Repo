@@ -1,1 +1,2 @@
-import('./bootstrap')
+console.log("projects");
+import("./bootstrap");
